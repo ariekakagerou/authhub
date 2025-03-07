@@ -1,21 +1,53 @@
-# authhub
+# AuthHub
 
-Aplikasi ini adalah aplikasi pengguna berbasis Flutter yang memungkinkan pengguna untuk mendaftar, masuk, dan mengelola profil mereka. Berikut adalah penjelasan singkat tentang bagaimana aplikasi ini bekerja:
-1. Struktur Aplikasi:
-Aplikasi ini terdiri dari beberapa layar, termasuk layar pendaftaran (RegisterScreen), layar login (LoginScreen), dan layar profil pengguna (ProfileScreenAuth).
-Aplikasi menggunakan MaterialApp untuk mengatur tema dan navigasi antar layar.
-2. Pendaftaran Pengguna:
-Pengguna dapat mendaftar dengan mengisi informasi seperti nama, email, username, password, gender, dan tanggal lahir.
-Data pendaftaran dikirim ke backend melalui HTTP POST request. Jika pendaftaran berhasil, pengguna akan diarahkan ke layar login.
-3. Login Pengguna:
-Pengguna dapat masuk dengan memasukkan email dan password mereka.
-Aplikasi mengirimkan permintaan login ke backend. Jika berhasil, token otentikasi disimpan menggunakan SharedPreferences untuk sesi pengguna.
-4. Mengelola Profil:
-Setelah login, pengguna dapat melihat dan mengelola profil mereka di ProfileScreenAuth.
-Aplikasi mengambil data profil pengguna dari backend menggunakan token yang disimpan. Pengguna dapat memperbarui atau menghapus profil mereka.
-Keamanan:
-Aplikasi menggunakan token JWT (JSON Web Token) untuk mengautentikasi pengguna dan melindungi endpoint API.
-Token disimpan secara lokal di perangkat menggunakan SharedPreferences, sehingga pengguna tetap terautentikasi selama sesi aplikasi.
-UI Responsif:
-Aplikasi menggunakan widget Flutter untuk membuat antarmuka pengguna yang responsif dan menarik, termasuk penggunaan gradien, animasi, dan elemen interaktif.
-Dengan struktur ini, aplikasi memberikan pengalaman pengguna yang mulus dan aman dalam mengelola akun dan profil mereka.
+**AuthHub** adalah aplikasi pengguna berbasis **Flutter** yang memungkinkan pengguna untuk **mendaftar, masuk, dan mengelola profil** mereka dengan mudah. Aplikasi ini dirancang dengan **UI responsif**, **keamanan JWT**, dan **pengelolaan sesi pengguna** yang andal.
+
+## 📌 Fitur Utama
+
+✅ **Pendaftaran Pengguna**  
+Pengguna dapat mendaftar dengan mengisi informasi seperti:
+- Nama lengkap
+- Email
+- Username
+- Password
+- Gender
+- Tanggal lahir
+
+Data pendaftaran dikirim ke backend melalui **HTTP POST request**. Jika berhasil, pengguna akan diarahkan ke layar login.
+
+✅ **Login & Autentikasi**  
+Pengguna dapat masuk dengan **email dan password** mereka. Jika berhasil, **token JWT** akan disimpan menggunakan **SharedPreferences** untuk menjaga sesi pengguna tetap aktif.
+
+✅ **Pengelolaan Profil**  
+Setelah login, pengguna dapat:
+- Melihat data profil mereka
+- Memperbarui informasi profil
+- Menghapus akun mereka
+
+Data diambil dari backend menggunakan **token autentikasi** yang tersimpan.
+
+✅ **Keamanan & Otentikasi**  
+- Menggunakan **JSON Web Token (JWT)** untuk melindungi endpoint API.
+- Token disimpan secara lokal menggunakan **SharedPreferences** untuk memastikan sesi tetap aman.
+
+✅ **UI Responsif & Modern**  
+- Dibangun dengan **Flutter Widgets** untuk tampilan yang menarik.
+- Menggunakan **gradien, animasi, dan elemen interaktif** untuk pengalaman pengguna yang lebih baik.
+
+## 📂 Struktur Aplikasi
+Aplikasi ini terdiri dari beberapa layar utama:
+1. **RegisterScreen** → Layar pendaftaran pengguna.
+2. **LoginScreen** → Layar login pengguna.
+3. **ProfileScreenAuth** → Layar profil pengguna setelah login.
+
+Navigasi antar layar dikelola menggunakan **MaterialApp** untuk pengalaman yang mulus.
+
+## 🚀 Teknologi yang Digunakan
+- **Flutter** untuk pengembangan aplikasi.
+- **Dart** sebagai bahasa pemrograman utama.
+- **HTTP API** untuk komunikasi dengan backend.
+- **SharedPreferences** untuk penyimpanan token autentikasi.
+- **JWT** untuk keamanan sesi pengguna.
+
+Dengan arsitektur ini, **AuthHub** memberikan pengalaman pengguna yang **mudah, aman, dan efisien** dalam mengelola akun mereka. 🎉
+
